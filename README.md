@@ -1,7 +1,7 @@
 # Mitiga Home Project
 
 This is a small project that serves 2 html pages locally.
-Technologies: Kubernetes, Docker, Pulumi, Nginx
+Technologies: Kubernetes, Docker, Pulumi, Nginx, Google Cloud SDK
 
 ### Getting Started
 
@@ -22,7 +22,10 @@ minikube start
 ```bash
 minikube service nginx-service
 ```
-6. run the URL's provided 
+6. run the URL's provided to test the app
+
+7. BONUS: Using GKE and basic yaml files: https://35.193.213.0/
+
 
 ![pulumi up](./images/pulumi%20up.png)
 ![pods](./images/pods.png)
