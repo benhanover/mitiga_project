@@ -1,4 +1,8 @@
 FROM nginx:alpine
 
-COPY index.html /usr/share/nginx/html/
-COPY welcome.html /usr/share/nginx/html/welcome.html
+RUN mkdir -p /etc/certs
+
+COPY ./resources/html/index.html /usr/share/nginx/html/
+COPY ./resources/html/welcome.html /usr/share/nginx/html/welcome.html
+COPY ./resources/certs /etc/certs
+COPY ./resources/default.conf /etc/nginx/conf.d

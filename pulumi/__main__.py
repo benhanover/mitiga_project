@@ -29,7 +29,7 @@ deployment = k8s.apps.v1.Deployment(
                 "containers": [
                     {
                         "name": "nginx",
-                        "image": "localhost:5000/mynginx",  # Use the local Docker image named "mynginx"
+                        "image": "localhost:5000/mynginx:1.0",
                         "resources": {
                             "requests": {"cpu": "100m", "memory": "128Mi"},
                             "limits": {"cpu": "200m", "memory": "256Mi"},
@@ -57,7 +57,7 @@ service = k8s.core.v1.Service(
             {"name": "http", "port": 80, "targetPort": 80},
             {"name": "https", "port": 443, "targetPort": 443},
         ],
-        "type": "ClusterIP",  # Expose the service with ClusterIP type
+        "type": "NodePort",  # Expose the service with ClusterIP type
     },
 )
 
