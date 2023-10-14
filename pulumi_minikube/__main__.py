@@ -4,7 +4,7 @@ import pulumi_kubernetes as k8s
 app_labels = {"app": "nginx"}
 
 # Define a PersistentVolumeClaim for the volume
-pvc = k8s.core.v1.PersistentVoluggVVuumeClaim(
+pvc = k8s.core.v1.PersistentVolumeClaim(
     "my-pvc",
     spec={
         "accessModes": ["ReadWriteOnce"],
